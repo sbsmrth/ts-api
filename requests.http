@@ -1,0 +1,57 @@
+@BASE_URL=http://localhost:3000
+
+### get users
+
+GET {{BASE_URL}}/users HTTP/1.1
+
+### create user
+
+POST {{BASE_URL}}/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Miriam",
+    "lastName": "Lopez",
+    "email": "rmm@gmail.com"
+}
+
+### create a second user
+
+POST {{BASE_URL}}/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Andres",
+    "lastName": "Martinez",
+    "email": "andres@gmail.com"
+}
+
+### create a third user
+
+POST {{BASE_URL}}/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Edelmira",
+    "lastName": "Vargas Perez",
+    "email": "edele@gmail.com"
+}
+
+### get a user by id
+
+GET {{BASE_URL}}/users/516f96be-985e-4274-8eb5-3fafce5e26b0 HTTP/1.1
+
+### delete a user by id
+
+DELETE {{BASE_URL}}/users/8a27f17d-d0a5-4dd7-bac8-8671448bac9c HTTP/1.1
+
+### update a user by id
+
+PUT {{BASE_URL}}/users/9873688e-0ad5-44c6-80c9-5e36e7e2e84ff HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Eduardo",
+    "lastName": "Reyes",
+    "email": "edre@gmail.com"
+}
